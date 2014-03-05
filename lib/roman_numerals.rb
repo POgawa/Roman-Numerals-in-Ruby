@@ -1,15 +1,6 @@
 def numbers_to_numerals(num)
-  roman_values = {
-    1 => 'I', 
-    5 => 'V',
-    10 => 'X',
-    50 => 'L',
-    100 => 'C',
-    500 => 'D',
-    1000 => 'M'
-  } 
   
-  numerals = roman_values[1] * num
+  numerals = 'I' * num
   numerals.gsub!(/[I]{1000}/, 'M')
   numerals.gsub!(/[I]{900}/, 'CM')
   numerals.gsub!(/[I]{500}/, 'D')
@@ -29,7 +20,15 @@ end
 
 puts numbers_to_numerals(1999)
 
-
+# roman_values = {
+#     1 => 'I', 
+#     5 => 'V',
+#     10 => 'X',
+#     50 => 'L',
+#     100 => 'C',
+#     500 => 'D',
+#     1000 => 'M'
+#   } 
 
 # roman_values = {
 #     'I' => 1, 
